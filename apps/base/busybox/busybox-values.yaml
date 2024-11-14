@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: busybox
-      image: ghcr.io/dorong95/busybox:1.0
+      image: busybox
       command: ["sleep", "3600"]
       # 'sleep 3600' 명령어로 1시간 동안 대기
       # 필요에 따라 다른 명령어로 대체 가능
