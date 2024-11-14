@@ -8,3 +8,9 @@ patches:
   - path: podinfo-values.yaml
     target:
       kind: HelmRelease
+  - target:
+      kind: OCIRepository
+    patch: |
+      - op: replace
+        path: /metadata/namespace
+        value: flux-system
