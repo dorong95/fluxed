@@ -1,0 +1,17 @@
+# busybox-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+  namespace: test-flux
+spec:
+  containers:
+    - name: busybox
+      image: busybox
+      command: ["sleep", "3600"]
+      # 'sleep 3600' 명령어로 1시간 동안 대기
+      # 필요에 따라 다른 명령어로 대체 가능
+      resources:
+        limits:
+          memory: "64Mi"
+          cpu: "250m"
